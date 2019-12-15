@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+$font-Source: "Source Sans Pro", sans-serif;
+$font-Hind: "Hind", sans-serif;
+$font-Fresca: "Fresca", sans-serif;
+$font-colors: (
+  white: rgba(228, 226, 226, 0.904),
+  black: rgb(27, 27, 27)
+);
+$font-sizes: (
+  small: 0.8em,
+  normal: 1em,
+  large: 3.15em
+);
+@mixin button {
+  font-family: $font-Hind;
+  color: map-get($font-colors, white);
+  background-color: $button-color;
+  border: none;
+  font-size: map-get($font-sizes, normal);
+  padding: 5px 30px;
+  height: 35px;
+  border-radius: 3px;
+  font-weight: 700;
+}
+@mixin link {
+  color: map-get($font-colors, white);
+  font-size: map-get($font-sizes, normal);
+  font-weight: 600;
+}
+@mixin mark-word {
+  background-color: $mark-color;
+  position: absolute;
+  z-index: -1;
+}
+@mixin flex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+body {
+  background-color: $section-bg;
+}
+.landing-logo {
+  display: flex;
+  color: $logo-black;
+  width: 100px;
+  justify-items: flex-start;
+  margin-bottom: 50px;
+  img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+  p {
+    text-align: center;
+    font-weight: bold;
+    span {
+      display: block;
+      font-size: 0.5em;
+    }
+  }
+}
+header {
+  background-image: $bg-image;
+  font-family: $font-Source;
+  width: 100%;
+  height: 500px;
+  border-radius: 0% 0% 40% 0%;
+  background-position: center;
+  background-size: cover;
+  .header-wrap {
+    width: 80%;
+    margin: 0px auto;
+    padding: 10px 0px;
+    .header_heading {
+      color: $text-color;
+      width: 440px;
+      font-size: map-get($font-sizes, large);
+      line-height: 1em;
+      font-weight: bold;
+      margin-bottom: 45px;
+      position: relative;
+      z-index: 1;
+      &:before {
+        content: "";
+        @include mark-word;
+        top: 65px;
+        width: 210px;
+        height: 35px;
+        left: 0;
+      }
+    }
+    .header_text {
+      font-family: $font-Hind;
+      font-size: map-get($font-sizes, small);
+      line-height: 1.4;
+      color: $text-color;
+      margin-bottom: 40px;
+      width: 40%;
+    }
+    .header_button {
+      @include button;
+    }
+    .login {
+      @include link;
+      margin-left: 100px;
+    }
+  }
+}
+.section {
+  font-family: $font-Hind;
+  background-color: $section-bg;
+  .section_text {
+    text-align: center;
+    color: $text-color;
+    font-size: 1.8em;
+    font-weight: 600;
+    margin: 25px 0px;
+    position: relative;
+    z-index: 1;
+    &:before {
+      content: "";
+      @include mark-word;
+      top: 0px;
+      left: 685px;
+      width: 130px;
+      height: 35px;
+    }
+  }
+  .section_card_wrap {
+    width: 58%;
+    margin: 0 auto;
+    .section_card {
+      background-color: $cards-color;
+      color: map-get($font-colors, white);
+      padding: 12px;
+      margin: 20px 0px;
+      display: flex;
+      border-radius: 5px;
+      .section_card_img {
+        border-radius: 5px;
+        width: 40%;
+      }
+      .section_card_right_container {
+        font-family: $font-Source;
+        margin-left: 30px;
+        width: 50%;
+        text-align: justify;
+        padding: 10px 25px;
+        font-size: map-get($font-sizes, small);
+        .section_card_heading {
+          text-align: center;
+          font-weight: 700;
+          margin: 20px 0px;
+          font-size: 1.5em;
+        }
+        .section_link {
+          @include link;
+          margin-top: 30px;
+          display: block;
+          text-align: center;
+        }
+      }
+    }
+  }
+  .section_banner {
+    @include flex;
+    color: $text-color;
+    width: 62%;
+    height: 100px;
+    padding: 20px;
+    position: relative;
+    top: 60px;
+    margin: 0 auto;
+    margin-top: 45px;
+    background: $gradient;
+    border-radius: 5px;
+    z-index: 1;
+    .section_banner_text_wrap {
+      .section_banner_heading {
+        font-size: 1.5em;
+        font-weight: bold;
+        &:before {
+          content: "";
+          @include mark-word;
+          top: 13px;
+          left: 210px;
+          width: 50px;
+          height: 37px;
+        }
+      }
+      .section_banner_text {
+        font-size: map-get($font-sizes, small);
+        color: map-get($font-colors, white);
+      }
+    }
+    .section_banner_button {
+      @include button;
+    }
+  }
+}
+.footer {
+  background-color: $footer-color;
+  color: map-get($font-colors, white);
+  font-family: $font-Fresca;
+  .footer-wrap {
+    @include flex;
+    font-size: map-get($font-sizes, small);
+    padding: 100px 0 40px;
+    .footer_logo {
+      @extend .landing-logo;
+      color: $logo-white;
+      margin-bottom: 0px;
+    }
+    .footer_text {
+      width: 220px;
+    }
+  }
+}
