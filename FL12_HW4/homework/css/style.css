@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    height: 10vh;
+    width: 100%;
+    padding: 30px 200px;
+    background-color: white;
+    color: #777;
+    display: flex;
+    justify-content: space-between;
+}
+
+.active {
+    color: #bfba55;
+}
+
+header .logo {
+    text-transform: uppercase;
+    font-size: 1.2em;
+}
+
+header nav ul {
+    display: flex;
+}
+
+header nav ul li {
+    list-style: none;
+    margin-left: 20px;
+}
+
+main {
+    height: 90vh;
+    max-width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/home-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+h1 {
+    padding-top: 30vh;
+    font-size: 4em;
+    font-weight: bold;
+    color: white;
+}
+
+main p {
+    margin-top: 30px;
+    color: #bfba55;
+}
+
+main button {
+    margin-top: 50px;
+    border: none;
+    width: 200px;
+    border-radius: 50px;
+    background-color: white;
+    text-transform: uppercase;
+    padding: 20px;
+}
+
+section {
+    width: 60%;
+    margin: 50px auto;
+}
+
+.post {
+    width: 100%;
+    padding: 50px 0px 40px 0px;
+    border-bottom: 1px solid #777;
+    ;
+}
+
+.post img {
+    max-width: 100%;
+}
+
+h4 {
+    font-weight: 700;
+    margin: 25px 0px 15px 0px;
+    font-size: 1.7em;
+}
+
+.description {
+    display: flex;
+    margin-bottom: 20px;
+    color: #777;
+}
+
+.author1,
+.author2 {
+    width: 40px;
+    height: 40px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.author1 {
+    background-image: url(../img/author-image1.jpg);
+}
+
+.author2 {
+    background-image: url(../img/author-image2.jpg);
+}
+
+.name,
+.date {
+    margin-right: 15px;
+}
+
+.topic {
+    color: #777;
+}
+
+a {
+    margin-top: 25px;
+    border-radius: 50px;
+    width: 160px;
+    border: 1px solid #777;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    color: #777;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 80px 0px;
+}
+
+.footer-content {
+    width: 60%;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.lab {
+    width: 400px;
+}
+
+.lab p,
+.contacts p {
+    color: #777;
+    font-size: 1em;
+    margin-bottom: 25px;
+}
+
+.lab p:first-child,
+.contacts p:first-child {
+    color: white;
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
